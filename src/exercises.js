@@ -3,8 +3,9 @@ function commonEnd(a, b) {
     return false;
   }
 
-  // write your code here
-  I JUST NEED SOMETHING TO COMMIT
+  if (a[0] === b[0]) {
+    return true;
+  }
 }
 
 function endsMeet(values, n) {
