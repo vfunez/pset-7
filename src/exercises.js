@@ -107,8 +107,18 @@ function everywhere(values, x) {
 }
 
 function consecutive(numbers) {
-  // write your code here
-}
+  if (!numbers || numbers.length < 3 || numbers.some(isNaN) || Number.isInteger(numbers)) {
+    return false;
+  } else {
+    for (let i = 1; i < numbers.length; i++) {
+      if (numbers [i - 1] % 2 === 1 && numbers [i] % 2 === 1 && numbers[i + 1] % 2 === 1) {
+        return true;
+    } else if (numbers[i - 1] % 2 === 0 && numbers [i] % 2 === 0 && numbers[i + 1] % 2 === 0)
+        return true;
+      }
+    }
+    return false;
+  }
 
 function balance(numbers) {
   // write your code here
