@@ -162,10 +162,30 @@ function balance(numbers) {
 
 function clumps(values) {
   let clump = 0;
-  let
+  let clumpLastIndex;
+  let val;
+  let same;
   if (!values) {
     return -1;
+  } else {
+    for (let i = 0; i < values.length - 1; i++) {
+      let runOne = i;
+      let runTwo = i + 1;
 
+      val = values[runOne];
+      same = values[runTwo];
+
+      if (val === same) {
+        while (val === same) {
+          val = values[runOne++];
+          same = values[runTwo++];
+        }
+        clump++;
+        clumpLastIndex = runOne - 1;
+        i = clumpLastIndex;
+      }
+    }
+    return clump;
   }
 }
 
