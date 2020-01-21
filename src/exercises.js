@@ -74,7 +74,9 @@ function middle(values) {
 }
 
 function increasing(numbers) {
-  // write your code here
+  if (!numbers || numbers.length < 3 || numbers.length % 2 === 0 || numbers.some(isNaN) || Number.isInteger(numbers)) {
+    return undefined;
+  }
 }
 
 function everywhere(values, x) {
