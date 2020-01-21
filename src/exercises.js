@@ -121,8 +121,43 @@ function consecutive(numbers) {
   }
 
 function balance(numbers) {
-  // write your code here
-  console.log("test");
+  let flag;
+  let sumOne = 0;
+  let sumTwo;
+  let sumThree = 0;
+  if (!numbers || numbers.length < 2 || numbers.some(isNaN)) {
+    flag = false;
+    return false;
+  } else {
+      for (let i = 0; i < numbers.length - 1; i++) {
+        if (Number.isInteger(numbers[i]) === false) {
+          flag = false;
+          return false;
+        }
+      }
+      for (let j = 0; j < numbers.length; j++) {
+        sumOne += numbers[j];
+      }
+      sumTwo = sumOne / 2;
+
+      if (sumOne % 2 === 1) {
+        flag = false;
+        return false;
+      }
+      for (let k = 0; k < numbers.length - 1; k++) {
+        sumThree += numbers[k];
+        if (sumThree === sumTwo) {
+          flag = true;
+          return true;
+        }
+      }
+      if (flag === true) {
+        return true;
+      } else {
+        return false;
+      }
+  }
+
 }
 
 function clumps(values) {
