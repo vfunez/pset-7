@@ -74,9 +74,17 @@ function middle(values) {
 }
 
 function increasing(numbers) {
-  if (!numbers || numbers.length < 3 || numbers.length % 2 === 0 || numbers.some(isNaN) || Number.isInteger(numbers)) {
+  if (!numbers || numbers.length < 3 || numbers.some(isNaN) || Number.isInteger(numbers)) {
     return undefined;
+  } else{
+    for (let i = 0; i < numbers.length; i++) {
+      if ((numbers[i-1] + 1) === numbers[i]) {
+        return true;
+        break;
+      }
+    }
   }
+  return false;
 }
 
 function everywhere(values, x) {
