@@ -34,7 +34,15 @@ function endsMeet(values, n) {
 }
 
 function difference(numbers) {
-  // write your code here
+  let largestValue = Number(Math.max.apply(null,numbers));
+  let smallestValue = Number(Math.min.apply(null,numbers));
+
+  if (!numbers || numbers.length < 1 || numbers.some(isNaN)) {
+    return undefined;
+  } else {
+      let difference = largestValue - smallestValue
+        return difference;
+  }
 }
 
 function max(number) {
