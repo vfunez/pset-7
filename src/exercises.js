@@ -25,6 +25,7 @@ function endsMeet(values, n) {
         }
       for (let i = n; i > 0; i--) {
         if (!(values[values.length - i] === undefined)) {
+          newArray.push(values[values.length-i]);
         }
       }
       return newArray;
