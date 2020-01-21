@@ -78,7 +78,7 @@ function increasing(numbers) {
     return undefined;
   } else{
     for (let i = 0; i < numbers.length; i++) {
-      if ((numbers[i-1] + 1) === numbers[i]) {
+      if (numbers[i] < numbers[i + 1] && numbers[i + 1] < numbers[i + 2]) {
         return true;
         break;
       }
@@ -161,7 +161,12 @@ function balance(numbers) {
 }
 
 function clumps(values) {
-  // write your code here
+  let clump = 0;
+  let
+  if (!values) {
+    return -1;
+
+  }
 }
 
 /*
