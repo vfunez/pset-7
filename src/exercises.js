@@ -10,7 +10,26 @@ function commonEnd(a, b) {
 }
 
 function endsMeet(values, n) {
-  // write your code here
+  let newArray = [];
+
+  if (!values || values.length < n || !Number.isInteger(n)) {
+    return newArray;
+  } else {
+      if (n === 0) {
+        return values;
+  } else {
+      for (let i = 0; i < n; i++) {
+        if (!(values[i] === undefined)) {
+          newArray.push(values[i]);
+          }
+        }
+      for (let i = n; i > 0; i--) {
+        if (!(values[values.length - i] === undefined)) {
+        }
+      }
+      return newArray;
+    }
+  }
 }
 
 function difference(numbers) {
